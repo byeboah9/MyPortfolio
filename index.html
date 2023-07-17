@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowy Ice Cream</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div id="wrapper" class="w3-container w3-theme-l5">
+        <header class="w3-container w3-theme-d5 w3-center">
+            <div class="subheaderleft">
+                <h1>Snowy Ice Cream</h1>
+                <h2>By Barbara Yeboah</h2>
+            </div>
+            <div class="subHeaderRight">
+                <img src="Ice-Cream-PNG-Pic.png" style="width: 50%;">
+            </div>
+        </header>
+        <nav>
+            <label>First Name</label>
+            <input type="text" class="w3-input" id="fName">
+
+            <label>Last Name</label>
+            <input type="text" class="w3-input" id="lName">
+
+            <label>Email</label>
+            <input type="text" class="w3-input" id="email">
+
+            <label>Flavor</label>
+            <select class="w3-input" name="option" id="orderFlavor">
+                <option value="" disabled selected>Choose your flavor</option>
+                <option value="Cherry">Cherry</option>
+                <option value="Coconut">Coconut</option>
+                <option value="Mango">Mango</option>
+                <option value="Mint">Mint</option>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Vanilla">Vanilla</option>
+            </select>
+
+            <label>Size</label>
+            <select class="w3-select" name="option" id="orderSize">
+                <option value="" disabled selected>Choose your size</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <br><br>
+            <input type="button" onclick="sendOrder()" value="Submit!">
+        </nav>
+        <section class="w3-container w3-theme-l5" id="orderInfo">
+           
+            Welcome to Snowy ice Cream. Place your order using the form to 
+            the left.
+        </section>
+        <main>
+            <table class="w3-table w3-striped w3-table-all">
+                <tr class="w3-theme-d4">
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Small</td>
+                    <td>$4.50</td>
+                </tr>
+                <tr>
+                    <td>Medium</td>
+                    <td>$6.00</td>
+                </tr>
+                <tr>
+                    <td>Large</td>
+                    <td>$8.00</td>
+                </tr>
+            </table>
+
+            <table class="w3-table w3-striped w3-table-all">
+                <tr class="w3-theme-d3">
+                    <th>Flavor</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Cherry</td>
+                    <td>+$0.50</td>
+                </tr>
+                <tr>
+                    <td>Coconut</td>
+                    <td>+$0.50</td>
+                </tr>
+                <tr>
+                    <td>Mango</td>
+                    <td>+$1.00</td>
+                </tr>
+                <tr>
+                    <td>Mint</td>
+                    <td>+$0.00</td>
+                </tr>
+                <tr>
+                    <td>Strawberry</td>
+                    <td>+$0.50</td>
+                </tr>
+                <tr>
+                    <td>Vanilla</td>
+                    <td>+$0.00</td>
+                </tr>
+            </table>
+            <br>
+        </main>
+
+        <footer>
+            Images from <a href="http://clipart-library.com/clipart/Ice-Cream-PNG-Pic.htm">Clipart Library</a>
+        </footer>
+    </div>
+    <script>
+        function sendOrder() {
+            orderinfo = document.getElementById('orderInfo');
+            fName = document.getElementById('fName').value;
+            lName = document.getElementById('lName').value;
+            email = document.getElementById('email').value;
+            orderFlavor = document.getElementById('orderFlavor').value;
+            orderSize = document.getElementById('orderSize').value;
+            total = 0.00;
+            if (orderSize == "Small") {
+                total += 450;
+            }
+            else if (orderSize == "Medium") {
+                total += 600;
+            }
+            else if (orderSize == "Large") {
+                total += 800;
+            }
+            if (orderFlavor == "Cherry") {
+                total += 50;
+            }
+            else if (orderFlavor == "Coconut") {
+                total += 50;
+            }
+            else if (orderFlavor == "Mango") {
+                total += 100;
+            }
+            else if (orderFlavor == "Strawberry") {
+                total += 50;
+            }
+            d = new Date();
+
+
+            text = "Thank you for business! Here is your order:" + "<br>";
+            text += "Order Date: " + d + "<br>";
+            text += "First Name: " + fName + "<br>";
+            text += "Last Name: " + lName + "<br>";
+            text += "Email: " + email + "<br>";
+            text += "Flavor: " + orderFlavor + "<br>";
+            text += "Size: " + orderSize + "<br>";
+            text += "Total: $" + total/100.00;
+
+            orderInfo.innerHTML = text;
+        }
+    </script>
+</body>
+</html>

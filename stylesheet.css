@@ -1,0 +1,56 @@
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: repeat(1fr, 5);
+    font-size: large;
+    border-style: solid;
+    padding: 1%;
+}
+
+header{
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr;
+}
+
+.subHeaderLeft {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.subHeaderRight {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.subHeaderLeft, h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 4em;
+    color: bisque;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+}
+
+section {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+    font-size: large;
+    padding: 1%;
+}
+
+main {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+    padding: 2%;
+}
+
+footer {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ITSA Login</title>
+        <style>
+            div{
+                text-align: center; 
+                background-color: lightgray;
+                border-color: black;
+                border-width: 2px;
+                border-style: solid;
+                padding-bottom: 15px;
+            }
+            span {
+                color: rgba(3,113,193,255);
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+<body style="background-color: rgba(3,113,193,255); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+<img src="/Images/ITSA_Logo.png" alt="ITSA Logo" width="150px" height="150px" class= "center">
+<div>
+<h1>ITSA Login</h1>
+<form method= "post" action = "Project3Info.php">
+    <br>User Name: <br>
+    <input type = "text" name = "username" required><br><br> 
+    Password: <br>
+    <input type = "password" name = "password" required><br><br>
+<br>
+<input type = "submit" name = "login" value = "Log In">
+<input type = "reset">
+</form>
+</div>
+<br>
+Register <a href="Project3Register.php">here! </a><br><br>
+</body>
+</html>
