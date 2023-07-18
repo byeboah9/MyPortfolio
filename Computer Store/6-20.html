@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>6-20</title>
+</head>
+<body>
+    <h1>GGC Computer Store</h1>
+    <form method="post" action="6-20Cart.php">
+        <table>
+            <tr>
+                <th>Item</th><th>Description</th><th>Price</th><th>Quantity</th>
+            </tr>
+            <tr>
+                <td><img src="/Images/dell.jpg" width="100px" alt=""></td>
+                    <input type="hidden" name="image[]" value="http://byeboah.lovestoblog.com/Images/dell.jpg">
+                <td>Dell All-in-One</td>
+                    <input type="hidden" name="description[]" value="Dell All-in-One">
+                <td>$670</td>
+                    <input type="hidden" name="price[]" value="670">
+                <td><input type="number" name="quantity[]" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="/Images/imac.jpg" width="100px" alt=""></td>
+                    <input type="hidden" name="image[]" value="http://byeboah.lovestoblog.com/Images/imac.jpg">
+                <td>iMac</td>
+                    <input type="hidden" name="description[]" value="iMac">
+                <td>$$1299</td>
+                    <input type="hidden" name="price[]" value="1299">
+                <td><input type="number" name="quantity[]" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="/Images/hp.jpg" width="100px" alt=""></td>
+                    <input type="hidden" name="image[]" value="http://byeboah.lovestoblog.com/Images/hp.jpg">
+                <td>HP Laptop</td>
+                    <input type="hidden" name="description[]" value="HP Laptop">
+                <td>$419</td>
+                    <input type="hidden" name="price[]" value="419">
+                <td><input type="number" name="quantity[]" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="/Images/macbook.jpg" width="100px" alt=""></td>
+                    <input type="hidden" name="image[]" value="http://byeboah.lovestoblog.com/Images/macbook.jpg">
+                <td>MacBook Air</td>
+                    <input type="hidden" name="description[]" value="MacBook Air">
+                <td>$999</td>
+                    <input type="hidden" name="price[]" value="999">
+                <td><input type="number" name="quantity[]" value="0" min="0"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" name="send" value="Add to cart">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
