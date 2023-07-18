@@ -3,7 +3,7 @@ This repository encompasses academic projects showcasing proficiency in HTML, CS
 
 Student Club Registration  
 
-• A multi-page project created with HTML, CSS, PHP, & MySQL
+• A multi-page project created using HTML, CSS, PHP, & MySQL
 • A registration page where users can enter data which will be stored in a database.
 • A login page where users can enter their credentials (username and password) to retrieve their data
 • Allows for an admiistrator to modify registered information
@@ -33,7 +33,7 @@ There is a form in "Contact Us" section with inout boxes for the user to enter t
 
 Computer Store
 
-• A multi-page project created with HTML, CSS, & PHP.
+• A multi-page project created using HTML, CSS, & PHP.
 • An initial html page displaying a shopping cart with various computers including description and prices
 • For each type of computer, there is an input element with a min attribute so the user can increase the amount of computers in their shopping cart
 • A shoppig cart page that displays the user's shopping cart after addign various items to it
